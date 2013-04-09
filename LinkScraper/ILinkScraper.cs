@@ -5,6 +5,6 @@ namespace Crawler
 {
     public interface ILinkScraper
     {
-        IReadOnlyList<Uri> GetLinks(string html);
+        IReadOnlyList<Uri> GetLinks(Uri parentUri, string html);
     }
 }
