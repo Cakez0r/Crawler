@@ -16,7 +16,7 @@ namespace Crawler
         {
             if (validator == null)
             {
-                throw new ArgumentException("Validator cannot be null", "validator");
+                throw new ArgumentNullException("validator");
             }
 
             m_validator = validator;

@@ -16,17 +16,32 @@ namespace Crawler
 
         public void AddRule(CrawlRule rule)
         {
+            if (rule == null)
+            {
+                throw new ArgumentNullException("rule");
+            }
 
+            m_crawlRules.Add(rule);
         }
 
         public void RemoveRule(CrawlRule rule)
         {
+            if (rule == null)
+            {
+                throw new ArgumentNullException("rule");
+            }
 
+            m_crawlRules.Remove(rule);
         }
 
         public bool DoesUriPassAllRules(Uri uri)
         {
-            return false;
+            if (uri == null)
+            {
+                throw new ArgumentNullException("uri");
+            }
+
+            return m_crawlRules.All(r => r.Validate(uri));
         }
     }
 }
