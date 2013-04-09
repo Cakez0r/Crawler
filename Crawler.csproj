@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CrawlDecider\CrawlRule.cs" />
     <Compile Include="CrawlQueue\ICrawlQueue.cs" />
+    <Compile Include="CrawlQueue\MemoryCrawlQueue.cs" />
     <Compile Include="LinkScraper\ILinkScraper.cs" />
     <Compile Include="CrawlDecider\CrawlDecider.cs" />
     <Compile Include="PageDownloader\IPageDownloader.cs" />
